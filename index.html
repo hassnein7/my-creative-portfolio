@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صوت لا يُنسى | كاتب محتوى استراتيجي - دماغ يشتغل</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8fafc; /* لون الخلفية العام */
+            color: #1e293b; /* لون النص الأساسي */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Dark mode styles */
+        .dark {
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        
+        .dark .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
+        }
+        
+        .dark .bg-white {
+            background-color: #1e293b;
+        }
+        
+        .dark .text-slate-800 {
+            color: #e2e8f0;
+        }
+
+        .dark .nav-link {
+            color: #e2e8f0;
+        }
+
+        .dark .nav-link:hover {
+            color: #ffffff;
+        }
+        
+        .dark .text-slate-600 {
+            color: #94a3b8;
+        }
+        
+        .dark .bg-slate-50 {
+            background-color: #1e293b;
+        }
+        
+        .dark .border-slate-700 {
+            border-color: #334155;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+        }
+        
+        .work-sample {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 0.75rem; /* rounded-xl */
+            overflow: hidden; /* لإخفاء أي جزء خارج الحدود */
+        }
+        
+        .work-sample:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            right: 0;
+            background-color: #0ea5e9;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active::after {
+            width: 100%;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            bottom: -8px;
+            right: 25%;
+            background-color: #0ea5e9;
+            border-radius: 3px;
+        }
+        
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.3), 0 2px 4px -1px rgba(14, 165, 233, 0.2);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        /* Specific styles for card content */
+        .work-sample-content .icon-wrapper {
+            background-color: #e0f2fe; /* bg-sky-100 */
+            width: 40px; /* أصغر قليلاً */
+            height: 40px; /* أصغر قليلاً */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .work-sample-content .icon-wrapper svg {
+            height: 24px; /* h-6 */
+            width: 24px; /* w-6 */
+            color: #0ea5e9; /* text-sky-500 */
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-sky-500 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
+                صوت لا يُنسى
+            </a>
+            
+            <div class="hidden md:flex space-x-8 space-x-reverse">
+                <a href="#home" class="nav-link active text-slate-300 hover:text-white font-medium">الرئيسية</a>
+                <a href="#about" class="nav-link text-slate-300 hover:text-white font-medium">دماغي</a>
+                <a href="#services" class="nav-link text-slate-300 hover:text-white font-medium">شغلي</a>
+                <a href="#work" class="nav-link text-slate-300 hover:text-white font-medium">أفكار تخبل</a>
+            </div>
+            
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button id="theme-toggle" class="text-slate-700 dark:text-slate-300">
+                    <svg id="theme-toggle-dark-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+                    </svg>
+                </button>
+                <button class="md:hidden text-slate-700 dark:text-slate-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-gradient py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">الكلمات اللي تخلي الناس <span class="text-sky-500">تحجي</span> بينا!</h1>
+                <p class="text-xl text-slate-600 mb-6">أنا مو بس أكتب محتوى، أنا أصنع صدمة إيجابية. عقلي ما يعرف يوقف عن توليد أفكار تخبل وتطير العقل... مستعد أخلي جمهورك يصفن! </p>
+                <div class="flex space-x-4 space-x-reverse">
+                    <a href="#work" class="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-medium transition duration-300 shadow-md">شُوف الأفكار</a>
+                    <a href="#services" class="border-2 border-sky-500 text-sky-500 hover:bg-sky-50 px-6 py-3 rounded-lg font-medium transition duration-300">شنو أسوي بالضبط؟</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 fade-in" style="animation-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="كتابة إبداعية" class="rounded-xl shadow-xl w-full h-auto max-w-lg mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-bold text-center mb-16">من <span class="text-sky-500">أنا</span> (ليش دماغي ما يعرف يسكت؟)</h2>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <img src="image/WhatsApp Image 2024-11-02 at 3.39.47 PM.JPG" alt="صورة شخصية" class="rounded-full w-64 h-64 object-cover shadow-lg border-4 border-white">
+                        <div class="absolute -bottom-3 -right-3 bg-sky-500 text-white px-4 py-2 rounded-full font-medium shadow-md">صانع ضجة</div>
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3 md:pr-10">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">مهندس يفكر، مبرمج يكتب، وكاتب محتوى يهز العقول!</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        آني مو بس مجرد "كاتب". آني مهندس حاسوب، يعني أفهم الـ Logic مال كل شي من صميمه. دماغي متعود يحلل المشاكل المعقدة ويصمم حلول برمجية، وهذا بالضبط اللي أطبقه بكتابة المحتوى. من أفهم المنتج مالتكم شلون يشتغل، أقدر أكتب عنه بطريقة تخلي الناس تتخبل عليه! يعني مو بس أملي كالندر، لا، أنا أسوي لك **ثورة محتوى** ما يگدر يسويها واحد يشتغل بس "copy-paste".
+                    </p>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        خبرتي بالبرمجة خلت عيني تشوف التفاصيل اللي ما حد يشوفها، وأصيد الأفكار اللي نايمة بوسط الأرقام. وشغلي بالـ IT و الـ ERP علمني شلون الأنظمة تشتغل، وشلون أدخل بيها "فيروس إبداع" يخليها تطلع أفكار كوميدية وتصاميم تخبل. أنت ما تحتاج واحد يگولي شسوي، أنت تحتاج واحد يگولي: "إبهرني!". وآني مستعد أبهـرك!
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <span class="skill-badge bg-sky-100 text-sky-800 px-4 py-2 rounded-full font-medium">اللوجيك الإبداعي</span>
+                        <span class="skill-badge bg-sky-100 text-sky-800 px-4 py-2 rounded-full font-medium">هندسة الكلمات</span>
+                        <span class="skill-badge bg-sky-100 text-sky-800 px-4 py-2 rounded-full font-medium">تحليل الأفكار</span>
+                        <span class="skill-badge bg-sky-100 text-sky-800 px-4 py-2 rounded-full font-medium">صناعة الضجة</span>
+                        <span class="skill-badge bg-sky-100 text-sky-800 px-4 py-2 rounded-full font-medium">جرأة المحتوى</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-bold text-center mb-16">ما <span class="text-sky-500">أقدمه</span> (شغل دماغي لا شغل يدي)</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-sky-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">حملات تسويقية تخلي العالم يصفن!</h3>
+                    <p class="text-slate-600">
+                        ما أكتب إعلان عادي يروح للصفحة الثانية! أصمم حملات تخلي منتجك أو خدمتك ببال كل واحد يشوفها، تحول الزوار إلى زباين دائميين، وتجيبلك فلوس تخلي الراوتر مالتك يحسدك! أنا أضمن لك محتوى يسوي ضجة حقيقية، مو مجرد "نشر" على السوشيال ميديا.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-sky-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">مقالات وفيديوهات (مو أي كلام)!</h3>
+                    <p class="text-slate-600">
+                        مقالاتي مو بس معلومات، هي رحلة فكرية تخليك تصفن وتضحك بنفس الوقت، ومرات يطفر قلبك من المفاجأة! فيديوهاتي؟ مو بس لقطات، سيناريو يشد الأعصاب ويخليك تنتظر الحلقة الجاية... كأنما دا تشوف فيلم أكشن كوميدي. كله كلام من عقل نظيف... بس شوية مجنون.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="bg-sky-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">سرد قصصي يخلي العالم يصفن!</h3>
+                    <p class="text-slate-600">
+                        كل علامة تجارية بيها قصة، وأنا وظيفتي أحول قصتكم لفيلم سينمائي برأس الجمهور، من أول كلمة لحد آخر نقطة. من قصة تأسيس الشركة لحد مغامرات المنتج الجديد. مو بس سرد، لا، هذا سحر يخلي الناس تحس بكل كلمة... يمكن تخلي واحد يبجي وواحد يضحك بنفس الوقت.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-bold text-center mb-16">أفكار <span class="text-sky-500">تخبل</span></h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="work-sample bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="image/1_INVbn8_3m3cj5YcUCgFyNw.png" alt="الذكاء الاصطناعي يحتل العالم" class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <div class="work-sample-content">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">الـ AI راح يحتلنا؟ (لو يدخلنا الجنة؟)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                نقاش جاد بس راسك يوجعك من الضحك! هل الذكاء الاصطناعي خطة جهنمية للاستيلاء على الكرة الأرضية لو هو مجرد "شغل بنية" يسويلنا شاي العصر؟ نفكك خرافات هوليود ونغوص بالواقع المرعب/المضحك، ونشوف منو اللي حيحصل مفتاح الجنة أول شي... وشنو ترتيبه بالصف هناك!
+                            </p>
+                            <div class="text-xs text-slate-500">
+                                <span class="bg-slate-100 px-2 py-1 rounded">#AI_كوميدي</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#رعب_الضحك</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#مستقبل_مجهول</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-sample bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="image/ما_أسباب_تعب_الجسم.jpg" alt="لماذا نحلم" class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <div class="work-sample-content">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">ليش نتحمل؟ حكمة الضيم العراقي!</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                منين نجيب الصبر اللي يخلينا نتحمل كل شي؟ هل هو جينات وراثية لو تدريب يومي من مواقف الحياة اللي تخلي الواحد يفتر بعقله ويريد يروح لتركيا؟ غوص عميق ومضحك في فلسفة "التحمل الأسطوري" للشعب العراقي، وشلون نطلع من كل مصيبة بضحكة... حتى لو الضحكة بيها غصة.
+                            </p>
+                            <div class="text-xs text-slate-500">
+                                <span class="bg-slate-100 px-2 py-1 rounded">#صبر_أهل_العراق</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#كوميديا_الحياة</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#تاريخ_الضحكة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-sample bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="image/لكل-مَن-يسهر-على-ضوء-الهاتف-قبل-النوم-1-1.jpg" alt="فن الكوميديا" class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <div class="work-sample-content">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">فن السكرول: عندما يتحول إصبعك لمجنون!</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                هل السكرول إدمان؟ لا، هذا فن! نتعمق في الأسرار الخفية لحركة إصبعك على الشاشة، وشلون ممكن تقضي ساعات تشوف فيديوهات قطط بدون ما تحس بالوقت. حلقة مفرغة من الضحك والنقد الذاتي، يمكن تخلي إصبعك يوقف يفتر.. ويدخل بسلسلة ضحك لا تنتهي، وتنسى حتى ليش فتحت التلفون!
+                            </p>
+                            <div class="text-xs text-slate-500">
+                                <span class="bg-slate-100 px-2 py-1 rounded">#إدمان_السكرول</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#كوميديا_التقنية</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#الزمن_الضائع</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-sample bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="image/Header-SF-IdeaTheft-TW.jpg" alt="لماذا نجوع" class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <div class="work-sample-content">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3v5a3 3 0 01-3 3 3 3 0 01-3-3v-5c0-1.657 1.343-3 3-3z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">الأفكار ليش تختل؟ (وشلون نطلعها بضحك!)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                كلنا عندنا أفكار "تخبل" بس تختل بآخر ركن بالدماغ، مثل راتب الموظف العراقي. ليش؟ وشلون نصيدها؟ هذا المحتوى يكتشف الأسباب المضحكة وراء "كسل الدماغ" ويقدم طرقاً كوميدية لإيقاظ إلهامك اللي صارله سنين نايم... يمكن يطلعلك فكرة مشروع وانت تشرب جاي.. وبطريقك تحل مشكلة الكهرباء!
+                            </p>
+                            <div class="text-xs text-slate-500">
+                                <span class="bg-slate-100 px-2 py-1 rounded">#إبداع_متخبي</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#كسل_دماغي</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#ضحكة_الإلهام</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-sample bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="image/17rep_AIcomedy_MAIN.webp" alt="الذكاء الاصطناعي يتزوج البشر" class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <div class="work-sample-content">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">لو الـ AI صار عراقي: شنو أول كلمة يتعلمها؟</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                نتخيل سيناريو كوميدي: شنو يصير لو الذكاء الاصطناعي درس باللهجة العراقية؟ هل يتعلم "شكو ماكو" لو "دبر راسك"؟ لو يروح يدور على "الشاي العراقي بالنعناع"؟ محتوى يجمع بين الفلسفة التقنية والواقع العراقي بأسلوب يخليك تصفن وتضحك بنفس الوقت... ويمكن يطيك حلول لمشاكل الكهرباء مال بيتكم!
+                            </p>
+                            <div class="text-xs text-slate-500">
+                                <span class="bg-slate-100 px-2 py-1 rounded">#AI_عراقي</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#كوميديا_تكنو</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#تخيلات_مستقبلية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-sample bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="image/1686894217106.png" alt="لماذا نفكر" class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <div class="work-sample-content">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">من يزوج الـ AI: أهل العروس لو جوجل؟!</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                إذا الذكاء الاصطناعي قرر يتزوج بشرية، منو حيدفع المهر؟ وهل العقد يكون بالبلوكتشين؟ وهل أهل العروس يطلبون تقرير "كفاءة حسابية" لو "كفاءة بالطبخ"؟ محتوى كوميدي يناقش مستقبل العلاقات البشرية مع التكنولوجيا بطريقة ما شايفيها قبل... يمكن يوصل للعشا مالت العرس!
+                            </p>
+                            <div class="text-xs text-slate-500">
+                                <span class="bg-slate-100 px-2 py-1 rounded">#زواج_الذكاء</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#كوميديا_الروبوتات</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#مشاكل_عائلية_مستقبلية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-sample bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="image/crop.webp" alt="لماذا نجوع" class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <div class="work-sample-content">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3v5a3 3 0 01-3 3 3 3 0 01-3-3v-5c0-1.657 1.343-3 3-3z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">ليش نجوع؟ (مو قصة أهلنا من كنا صغار!)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                الجوع مو بس كركرت بطن، هذا علم وفلسفة! ليش نصير عصبيين من نجوع؟ وشنو علاقة الأكل بالمشاعر؟ وشنو الفرق بين جوع الليل وجوع العصر؟ محتوى يخليك تضحك وتتثقف... ويمكن يخليك تطلب أكل بعد ما تخلص قراءة... أو تسوي دايت من كثر التفكير!
+                            </p>
+                            <div class="text-xs text-slate-500">
+                                <span class="bg-slate-100 px-2 py-1 rounded">#فلسفة_الأكل</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#كوميديا_الجوع</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#علم_النفس_والبطن</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-sample bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="image/1739720294988-frame-1707480121.avif" alt="لماذا نفكر" class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <div class="work-sample-content">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">ليش نفكر؟ (وراسنا يوجعنا بالنهاية!)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                سؤال يطرحه كل واحد بينا من يصير عنده كومة مشاكل: ليش نفكر أصلاً؟ هل هو تطور؟ لو عقاب إلهي؟ هذا المحتوى يغوص بعمق كوميدي في أسرار الدماغ، وليش التفكير ضروري... حتى لو يخليك تسهر للصبح تفكر بباجر شراح تاكل وشلون تحصل راتب.
+                            </p>
+                            <div class="text-xs text-slate-500">
+                                <span class="bg-slate-100 px-2 py-1 rounded">#فلسفة_الرأس</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#تفكير_مجنون</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#علم_الدماغ_الضايع</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="work-sample bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="image/god-of-gods.BAfQ_wyu_Z1w3T8C.webp" alt="قواعد الكون" class="w-full h-48 object-cover rounded-t-xl">
+                    <div class="p-6">
+                        <div class="work-sample-content">
+                            <div class="icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">القواعد مال الكون: هل هي "لوجيك" لو "تخبل"؟!</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                من قوانين الفيزياء لحد قرارات الحياة اليومية، هل الكون يمشي على لوجيك برمجي لو هو كله "حظ ونصيب"؟ محتوى يربط الفلسفة العميقة بالكوميديا اليومية، يخليك تصفن على اللوجيك مال حياتنا اللي مرات يطلع "زيرو داي"... ويمكن تكتشف إن الكون كله يحتاج "أبديت" عاجل.
+                            </p>
+                            <div class="text-xs text-slate-500">
+                                <span class="bg-slate-100 px-2 py-1 rounded">#فلسفة_كونية</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#لوجيك_الحياة</span>
+                                <span class="bg-slate-100 px-2 py-1 rounded">#الزيرو_داي_الوجودي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophy" class="py-20 px-6 bg-gradient-to-b from-slate-900/50 to-slate-900/20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl font-bold text-center mb-16">فلسفتي في المحتوى</h2>
+            
+            <div class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-8 border border-slate-700/50">
+                <div class="flex items-start mb-6">
+                    <div class="text-amber-400 mr-4 mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">المحتوى مو بس كلمات، هو "طبة" بعقل الجمهور!</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            آني ما أكتب بس حتى أملي فراغات الكالندر. كل كلمة تطلع من دماغي بيها طاقة تكهرب القارئ، وكل جملة أحطها لازم تسوي بيه شي. أحب أسوي محتوى يضرب بالصميم، يخليه يوكف السكرول ويصفن، وبعدين يضحك، وبعدين يفكر: "هذول منين يجيبون هالحجي؟!"
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mt-10">
+                    <div class="bg-slate-800/50 p-5 rounded-lg border border-slate-700/30 hover:border-amber-400/30 transition-colors">
+                        <h4 class="font-bold text-amber-400 mb-2">دماغي هو الـ AI مالتي! (ما يحتاج شحن!)</h4>
+                        <p class="text-slate-300 text-sm">الأفكار عندي ما تنضب، لأن دماغي متعود يشتغل 24/7، حتى وأني نايم. كلما استخدمته أكثر، صار "أذكى" ويجيب أفكار "تخبل" ومحد سامع بيها قبل... يمكن بي تحديث تلقائي ما نعرف عنه!</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 p-5 rounded-lg border border-slate-700/30 hover:border-amber-400/30 transition-colors">
+                        <h4 class="font-bold text-amber-400 mb-2">أحـول العـادي إلى "فايرل"!</h4>
+                        <p class="text-slate-300 text-sm">عندي عين تشوف التفاصيل اللي ما حد يشوفها، وعقل يحولها إلى محتوى "يسوي ضجة" وينتشر مثل النار بالهشيم. الشغل العادي؟ هذا مو اختصاصي! أنا أحب أسوي محتوى يخلي الكل يحجي بيه ويشاركه حتى لو ما يعرف شنو السالفة!</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 p-5 rounded-lg border border-slate-700/30 hover:border-amber-400/30 transition-colors">
+                        <h4 class="font-bold text-amber-400 mb-2">أبيع فكر... مو أبيع وقت!</h4>
+                        <p class="text-slate-300 text-sm">أنا ما أحسبها بالساعة لو بالكلمة، أحسبها بالتأثير. المهم النتيجة تطلع "تخبل" وتخلي جمهورك يحبكم ويحجي بيكم. هذا شغل يدي وعقلي سواً... ويمكن هم روح الفكاهة اللي بيه!</p>
+                    </div>
+                    
+                    <div class="bg-slate-800/50 p-5 rounded-lg border border-slate-700/30 hover:border-amber-400/30 transition-colors">
+                        <h4 class="font-bold text-amber-400 mb-2">الكلمة بضمير (يعني ما تتكرر!)</h4>
+                        <p class="text-slate-300 text-sm">كل كلمة أكتبها لازم تكون جديدة، قوية، ومسؤولة. ما أحب التكرار لو الكلام الممل. المحتوى مالتي لازم يعكس روح الإبداع والجرأة... وما تلقى مثله لا بالشرق ولا بالغرب!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="py-10 px-6 border-t border-slate-800/50 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-sky-500 font-bold text-2xl mb-4">صوت لا يُنسى</div>
+            <p class="text-slate-400 mb-6">الكلمات التي تبقى، الأفكار التي تلهم، المحتوى الذي يترك أثرًا</p>
+            
+            <div class="flex justify-center space-x-6 space-x-reverse mb-6">
+                <a href="https://www.linkedin.com/in/hassnein-falah-31a614329" target="_blank" class="text-slate-400 hover:text-sky-400 transition-colors">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                
+            </div>
+            
+            <p class="text-slate-500 text-sm">&copy; <span id="year"></span> صوت لا يُنسى. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Particle Background (New: from the original "صوت لا يُنسى" code)
+        function createParticles() {
+            const container = document.getElementById('particles-container');
+            const particleCount = Math.floor(window.innerWidth / 10);
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 2 + 1;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                particle.style.opacity = Math.random() * 0.5;
+                
+                const duration = Math.random() * 20 + 10;
+                particle.style.animation = `float ${duration}s linear infinite`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                
+                container.appendChild(particle);
+            }
+        }
+
+        // Typing Effect (New: from the original "صوت لا يُنسى" code)
+        function typeWriter() {
+            const textElement = document.getElementById('typing-text');
+            const phrases = [
+                "عندما تُفكّر الأفكار...",
+                "عندما تتشكل الكلمات...",
+                "عندما يولد الإبداع..."
+            ];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+            
+            function type() {
+                const currentPhrase = phrases[phraseIndex];
+                
+                if (isDeleting) {
+                    textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                    charIndex--;
+                    typingSpeed = 50;
+                } else {
+                    textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                    charIndex++;
+                    typingSpeed = 100;
+                }
+                
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    isDeleting = true;
+                    typingSpeed = 1500; // Pause at end of phrase
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    typingSpeed = 500; // Pause before typing next phrase
+                }
+                
+                setTimeout(type, typingSpeed);
+            }
+            
+            type();
+        }
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Initialize
+        window.addEventListener('load', () => {
+            createParticles(); // Initialize particles
+            typeWriter(); // Initialize typing effect
+        });
+
+        // Theme toggle functionality
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        
+        // Check for saved theme preference or use preferred color scheme
+        if (localStorage.getItem('color-theme') === 'dark' || 
+            (!localStorage.getItem('color-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggleLightIcon.classList.remove('hidden');
+            themeToggleDarkIcon.classList.add('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeToggleDarkIcon.classList.remove('hidden');
+            themeToggleLightIcon.classList.add('hidden');
+        }
+        
+        // Toggle theme on button click
+        themeToggleBtn.addEventListener('click', function() {
+            // Toggle icons
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+            
+            // Toggle theme
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+        
+        // Fixed Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Update active nav link (optional)
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        // Mobile menu toggle (Placeholder - needs implementation)
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            console.log('Mobile menu clicked');
+            // Add your mobile menu toggle logic here (e.g., show/hide a mobile navigation div)
+        });
+
+    </script>
+</body>
+</html>
